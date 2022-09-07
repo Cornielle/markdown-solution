@@ -11,21 +11,17 @@ const Markdown = (): JSX.Element => {
         case line.startsWith(MarkdownFormats.headingTwo):
         return (
           `
-          <p>
             <h2>
               ${line.replace(MarkdownFormats.headingTwo, '')}
             </h2>
-          </p> 
           `
         )
         case line.startsWith(MarkdownFormats.headingOne):
           return (
             `
-            <p>
               <h1>
                 ${line.replace(MarkdownFormats.headingOne, '')}
               </h1>
-            </p> 
             `
           )
         case line.startsWith(MarkdownFormats.horizontalRule):
@@ -37,9 +33,7 @@ const Markdown = (): JSX.Element => {
         default:
           return (
             `
-              <p>
-                ${line}
-              </p> 
+              ${line}
             `
           )
       }
@@ -81,7 +75,7 @@ const Markdown = (): JSX.Element => {
             className='output-text'
             dangerouslySetInnerHTML=
               {
-                {__html: markdown}
+                {__html: `<p>${markdown}</p>`}
               }
           >
           </p>
