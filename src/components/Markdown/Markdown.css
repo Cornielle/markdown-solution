@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+
+
+.input{
+    width: 30%;
+    height: 598px;
+    background-color: white;
+    border: 1px solid lightgray;
+    word-break:break-all;
+    margin-right: 50px;
+    padding-top: 0px;
+    border-radius: 3px;
+    resize: none;
+    padding: 15px;
+}
+
+.output{
+    width: 30.7%;
+    height: 628px;
+    background-color: white;
+    border: 1px solid lightgray;
+    word-break:break-all;
+    border-radius: 3px;
+}
+
+.output-text{
+    color: black;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .container{
+        display: block;
+        margin-left: 18%;
+    }
+    .input{
+        width: 80%;
+    }
+    
+    .output{
+        width: 84.2%;
+    }
+}
